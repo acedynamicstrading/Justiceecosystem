@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Justice LK Ecosystem</title>
+<meta name="description" content="Privacy Policy for the Justice LK Ecosystem — JusticeLK, JusticeKids, LexLK, JusticeSL. How we collect, use, and protect your personal information.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Privacy Policy — Justice LK Ecosystem">
+<meta property="og:description" content="How the Justice LK Ecosystem handles your data — transparent, safe, and compliant with Sri Lankan and international data protection standards.">
+<meta name="theme-color" content="#0A1628">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:#0A1628;color:#fff;overflow-x:hidden;line-height:1.7;}
+a{text-decoration:none;color:inherit}
+:root{
+  --navy:#0A1628;--navy2:#0D1B2A;--teal:#12A89B;--gold:#D4A843;
+  --red:#E74C3C;--green:#27AE60;--white:#fff;--grey:rgba(255,255,255,0.6);
+  --border:rgba(255,255,255,0.08);
+}
+nav{
+  position:sticky;top:0;z-index:100;
+  padding:16px 40px;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(10,22,40,0.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-brand{display:flex;align-items:center;gap:10px;}
+.nav-name{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;}
+.nav-links a{font-size:12px;font-weight:600;color:var(--grey);transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.page-hero{
+  padding:70px 24px 50px;text-align:center;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(18,168,155,0.1),transparent 70%),var(--navy);
+  border-bottom:1px solid var(--border);
+}
+.page-tag{
+  display:inline-block;font-size:10px;letter-spacing:3px;font-weight:700;
+  text-transform:uppercase;color:var(--teal);
+  border:1px solid rgba(18,168,155,0.3);border-radius:99px;
+  padding:5px 16px;margin-bottom:20px;
+}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.1;margin-bottom:16px;}
+.page-title span{color:var(--teal);}
+.page-sub{font-size:15px;color:var(--grey);max-width:640px;margin:0 auto 12px;}
+.page-date{font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:1px;}
+
+/* TABLE OF CONTENTS */
+.toc{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border);
+  border-radius:14px;padding:24px 28px;margin-bottom:48px;
+}
+.toc-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:14px;}
+.toc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;}
+.toc-list li a{font-size:13px;color:var(--grey);display:flex;align-items:center;gap:8px;transition:color 0.2s;}
+.toc-list li a:hover{color:var(--teal);}
+.toc-list li a::before{content:'§';color:var(--teal);font-size:11px;flex-shrink:0;}
+
+main{max-width:900px;margin:0 auto;padding:60px 24px 80px;}
+.pp-section{margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid var(--border);}
+.pp-section:last-child{border-bottom:none;}
+.pp-section-label{font-size:10px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+.pp-section-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,30px);font-weight:700;margin-bottom:18px;line-height:1.2;}
+.pp-section-title span{color:var(--gold);}
+.pp-body{font-size:15px;color:var(--grey);line-height:1.8;margin-bottom:14px;}
+.pp-body strong{color:var(--white);}
+
+/* DATA TABLE */
+.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;}
+.data-table th{text-align:left;padding:10px 14px;background:rgba(255,255,255,0.04);color:var(--teal);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border);}
+.data-table td{padding:12px 14px;color:var(--grey);border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top;line-height:1.6;}
+.data-table td strong{color:var(--white);}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:hover td{background:rgba(255,255,255,0.01);}
+
+/* PLATFORM BADGES */
+.platform-badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;}
+.pbadge{
+  font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  padding:4px 12px;border-radius:99px;
+}
+.pbadge.t{background:rgba(18,168,155,0.15);color:var(--teal);border:1px solid rgba(18,168,155,0.2);}
+.pbadge.g{background:rgba(212,168,67,0.15);color:var(--gold);border:1px solid rgba(212,168,67,0.2);}
+.pbadge.p{background:rgba(139,92,246,0.15);color:#a78bfa;border:1px solid rgba(139,92,246,0.2);}
+.pbadge.b{background:rgba(59,130,246,0.15);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);}
+
+/* NOTICE BOXES */
+.notice-box{background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.25);border-radius:14px;padding:22px 26px;margin:22px 0;}
+.notice-box.teal{background:rgba(18,168,155,0.06);border-color:rgba(18,168,155,0.25);}
+.notice-box.red{background:rgba(231,76,60,0.06);border-color:rgba(231,76,60,0.25);}
+.notice-box.green{background:rgba(39,174,96,0.06);border-color:rgba(39,174,96,0.25);}
+.notice-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+.notice-label.gold{color:var(--gold);}
+.notice-label.teal{color:var(--teal);}
+.notice-label.red{color:var(--red);}
+.notice-label.green{color:var(--green);}
+.notice-text{font-size:14px;color:var(--grey);line-height:1.7;}
+.notice-text strong{color:var(--white);}
+
+/* LISTS */
+.pp-list{list-style:none;margin:14px 0;}
+.pp-list li{font-size:14px;color:var(--grey);padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:flex-start;gap:12px;line-height:1.6;}
+.pp-list li:last-child{border-bottom:none;}
+.pp-list li::before{content:'→';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px;}
+.pp-list.check li::before{content:'✓';color:var(--green);}
+.pp-list.cross li::before{content:'✕';color:var(--red);}
+.pp-list li strong{color:var(--white);}
+
+/* RIGHTS GRID */
+.rights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;}
+.right-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color 0.2s;}
+.right-card:hover{border-color:rgba(18,168,155,0.3);}
+.right-card .icon{font-size:22px;margin-bottom:8px;}
+.right-card .name{font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px;}
+.right-card .desc{font-size:12px;color:var(--grey);line-height:1.5;}
+
+/* CONTACT */
+.contact-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;}
+.contact-item{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:16px 20px;flex:1;min-width:180px;}
+.contact-item .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+.contact-item .value{font-size:14px;font-weight:600;color:var(--white);}
+.contact-item .sub{font-size:12px;color:var(--grey);}
+.contact-item a{color:var(--teal);}
+
+footer{background:rgba(0,0,0,0.4);border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:12px;color:rgba(255,255,255,0.3);}
+footer a{color:var(--teal);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:12px;}
+
+@media(max-width:640px){
+  nav{padding:14px 16px;}
+  .nav-links{display:none;}
+  main{padding:40px 16px 60px;}
+  .toc-list{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <span style="font-size:20px;">⚖️</span>
+    <span class="nav-name">Justice LK Ecosystem</span>
+  </div>
+  <div class="nav-links">
+    <a href="https://acedynamicstrading.github.io/justicelk/">JusticeLK</a>
+    <a href="https://acedynamicstrading.github.io/justicekids/">JusticeKids</a>
+    <a href="https://acedynamicstrading.github.io/Lexlk/">LexLK</a>
+    <a href="https://acedynamicstrading.github.io/JusticeSL/">JusticeSL</a>
+    <a href="./copyright.html">Copyright & IP</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">Legal · Data Protection</div>
+  <h1 class="page-title"><span>Privacy Policy</span></h1>
+  <p class="page-sub">We are committed to protecting the privacy and safety of every user — especially children. This policy explains clearly what we collect, why, and how it is protected.</p>
+  <div class="page-date">Effective: 1 January 2024 · Last Updated: 26 March 2026 · Version 2.0 · Applies to all four platforms of the Justice LK Ecosystem</div>
+</div>
+
+<main>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1">1. Who We Are</a></li>
+      <li><a href="#s2">2. Platforms This Policy Covers</a></li>
+      <li><a href="#s3">3. Information We Collect</a></li>
+      <li><a href="#s4">4. How We Use Information</a></li>
+      <li><a href="#s5">5. Children's Privacy (JusticeKids)</a></li>
+      <li><a href="#s6">6. SOS & Emergency Location Data</a></li>
+      <li><a href="#s7">7. Cookies & Tracking</a></li>
+      <li><a href="#s8">8. Data Storage & Security</a></li>
+      <li><a href="#s9">9. Third-Party Services</a></li>
+      <li><a href="#s10">10. Data Sharing & Disclosure</a></li>
+      <li><a href="#s11">11. Your Rights</a></li>
+      <li><a href="#s12">12. Data Retention</a></li>
+      <li><a href="#s13">13. International Users</a></li>
+      <li><a href="#s14">14. Changes to This Policy</a></li>
+      <li><a href="#s15">15. Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- 1 -->
+  <div class="pp-section" id="s1">
+    <div class="pp-section-label">Section 1</div>
+    <h2 class="pp-section-title">Who <span>We Are</span></h2>
+    <p class="pp-body">The Justice LK Ecosystem is owned by <strong>Elmo Richard Pereira</strong> and operated by <strong>Ace Dynamics Trading</strong>, a trading entity registered in Sri Lanka.</p>
+    <p class="pp-body">When this Privacy Policy refers to "we", "us", or "our", it refers to Ace Dynamics Trading acting on behalf of and under licence from Elmo Richard Pereira, the owner of the Justice LK Ecosystem.</p>
+    <p class="pp-body">We are committed to processing personal data responsibly, transparently, and in compliance with the <strong>Personal Data Protection Act No. 9 of 2022 of Sri Lanka</strong> (PDPA), and with applicable international standards including the principles of the EU General Data Protection Regulation (GDPR) where relevant to international users.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="pp-section" id="s2">
+    <div class="pp-section-label">Section 2</div>
+    <h2 class="pp-section-title">Platforms This <span>Policy Covers</span></h2>
+    <p class="pp-body">This Privacy Policy applies to all four platforms of the Justice LK Ecosystem:</p>
+    <div class="platform-badge-row">
+      <span class="pbadge t">⚖️ JusticeLK — Field Officer Case Management</span>
+      <span class="pbadge g">🦁 JusticeKids — Child Rights Education</span>
+      <span class="pbadge p">👨‍⚖️ LexLK — Professional Legal Services</span>
+      <span class="pbadge b">🌐 JusticeSL — Public Legal Information</span>
+    </div>
+    <p class="pp-body">Each platform collects different categories of data appropriate to its function. This policy sets out the rules applicable to all platforms collectively, with platform-specific provisions where necessary.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="pp-section" id="s3">
+    <div class="pp-section-label">Section 3</div>
+    <h2 class="pp-section-title">Information <span>We Collect</span></h2>
+
+    <p class="pp-body">The following table sets out the information collected by each platform, the legal basis for collection, and the purpose:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Platform</th><th>Data Collected</th><th>Purpose</th><th>Legal Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>JusticeLK</strong><br><span style="font-size:11px;color:var(--teal);">Field Officers</span></td>
+          <td>Client full name, NIC, date of birth, gender, address, district, mobile/WhatsApp, email, language preference, case facts, respondent details, incident date/location, uploaded documents, officer username and credentials.</td>
+          <td>Legal aid case registration, routing to Legal Aid Commission or private attorneys, case tracking, AI-assisted case summary generation, court petition drafting.</td>
+          <td>Consent of the client (obtained by the field officer at registration); legitimate interest in providing access to legal aid services; legal obligation to route cases to Legal Aid Commission.</td>
+        </tr>
+        <tr>
+          <td><strong>JusticeKids</strong><br><span style="font-size:11px;color:var(--gold);">Children</span></td>
+          <td><strong style="color:var(--green);">No personal data is collected from children.</strong> Quiz results are anonymous. The "Ask Leo" chatbot processes conversational text only for the duration of the session and is not stored. Certificate generation uses only the name entered voluntarily by the child and is processed locally on their device.</td>
+          <td>Child rights education. Anonymous learning. Emergency SOS (location only — see Section 6).</td>
+          <td>No personal data processing occurs. SOS location data is processed under the vital interests of the data subject (child safety emergency).</td>
+        </tr>
+        <tr>
+          <td><strong>LexLK</strong><br><span style="font-size:11px;color:#a78bfa;">Legal Services</span></td>
+          <td>Account registration details (name, email, nationality, password hash), consultation request details (name, WhatsApp/mobile, email, nationality, area of law, case description), uploaded legal documents (text format), legal Q&A session text (not stored after session), document retrieval request details.</td>
+          <td>Account management, facilitating attorney review and consultation, connecting users with qualified Sri Lankan attorneys, official document retrieval, and AI-assisted legal analysis.</td>
+          <td>Contract (to fulfil the service requested); consent (for marketing communications, if any); legitimate interest (improving platform services); vital interests (emergency legal help).</td>
+        </tr>
+        <tr>
+          <td><strong>JusticeSL</strong><br><span style="font-size:11px;color:#93c5fd;">Public / Foreigners</span></td>
+          <td>Consultation enquiry details (name, WhatsApp/mobile, email, nationality, area of law, description) submitted voluntarily. SOS button: GPS coordinates (see Section 6). Legal Q&A session text (not stored). General analytics (page views, not linked to individuals).</td>
+          <td>Connecting users with attorneys, responding to enquiries, emergency response via SOS, improving platform content.</td>
+          <td>Consent; vital interests (SOS emergency); legitimate interest (service improvement).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="notice-box teal">
+      <div class="notice-label teal">What We Do Not Collect</div>
+      <div class="notice-text">We do <strong>not</strong> collect: payment card information (all free-access services are provided at no charge; where fees apply for professional services, payment is handled directly between the client and attorney); biometric data; precise continuous location tracking; social media credentials; or any data from children through JusticeKids beyond anonymous quiz participation.</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="pp-section" id="s4">
+    <div class="pp-section-label">Section 4</div>
+    <h2 class="pp-section-title">How We Use <span>Information</span></h2>
+    <ul class="pp-list">
+      <li><strong>Providing Services</strong> — Processing case registrations, routing files to legal aid, facilitating attorney consultations, generating case summaries and court petitions, and responding to legal enquiries.</li>
+      <li><strong>Emergency Response</strong> — Using SOS location data to contact emergency services and our safety response team on behalf of users in danger.</li>
+      <li><strong>Attorney-Client Facilitation</strong> — Sharing case details and documents with the Legal Aid Commission of Sri Lanka or registered private attorneys, as selected by the user or field officer.</li>
+      <li><strong>AI Analysis</strong> — Processing submitted documents and questions through AI systems to generate case summaries, legal analysis, and Q&A responses. AI output is always clearly labelled as informational only.</li>
+      <li><strong>Platform Improvement</strong> — Using anonymised, aggregated usage data to improve platform performance, content accuracy, and user experience.</li>
+      <li><strong>Institutional Reporting</strong> — Providing aggregated, non-identifying statistics to partner organisations (Ministry of Justice, Legal Aid Commission, UNDP, etc.) for programme evaluation and grant reporting.</li>
+      <li><strong>Compliance</strong> — Complying with legal obligations, including court orders, regulatory requirements, and mandatory disclosures under Sri Lankan law.</li>
+    </ul>
+    <div class="notice-box">
+      <div class="notice-label gold">We Will Never</div>
+      <div class="notice-text">Sell your personal data to any third party. Use your data for unrelated commercial purposes. Share your information with advertisers. Profile children based on their platform use. Disclose attorney-client privileged information without lawful authority.</div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="pp-section" id="s5">
+    <div class="pp-section-label">Section 5</div>
+    <h2 class="pp-section-title">Children's Privacy <span>(JusticeKids)</span></h2>
+
+    <div class="notice-box green">
+      <div class="notice-label green">Child Safety — Our Strongest Commitment</div>
+      <div class="notice-text"><strong>JusticeKids is designed from the ground up to collect zero personal data from children.</strong> No account creation is required. No names, addresses, NICs, school names, or any other identifying information is requested or stored. Children can use all features of JusticeKids anonymously.</div>
+    </div>
+
+    <p class="pp-body">The following child safety principles govern JusticeKids absolutely:</p>
+    <ul class="pp-list check">
+      <li><strong>No registration required</strong> — Children access all rights education content, Leo's story, the quiz, and Ask Leo without creating any account.</li>
+      <li><strong>No data storage of quiz results</strong> — Quiz answers and scores are processed locally in the browser and are not transmitted to or stored on any server.</li>
+      <li><strong>No advertising</strong> — JusticeKids contains no advertising of any kind. No advertising networks have access to the platform.</li>
+      <li><strong>Certificate privacy</strong> — When a child enters their name to generate a certificate, this is processed entirely in the browser. The name is never transmitted to any server.</li>
+      <li><strong>Ask Leo — session only</strong> — Conversations with the Ask Leo chatbot are not stored after the browser session ends. No conversation history is retained.</li>
+      <li><strong>UNCRC alignment</strong> — JusticeKids is designed in accordance with the United Nations Convention on the Rights of the Child, Article 16 (right to privacy).</li>
+      <li><strong>Anonymous SOS</strong> — The Minor Protection Portal and SOS button do not require a child to identify themselves to receive help.</li>
+    </ul>
+
+    <p class="pp-body">JusticeKids complies with the <strong>Children's Online Privacy Protection principles</strong> applicable in Sri Lanka and internationally. If you have concerns about a child's use of the platform, contact us at the details in Section 15.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="pp-section" id="s6">
+    <div class="pp-section-label">Section 6</div>
+    <h2 class="pp-section-title">SOS & Emergency <span>Location Data</span></h2>
+
+    <p class="pp-body">The SOS emergency system is available on JusticeKids, JusticeSL, and JusticeLK. When a user activates the SOS button:</p>
+    <ul class="pp-list">
+      <li>The browser requests permission to access the device's GPS location. <strong>This permission is always explicitly requested from the user and is never granted without active consent.</strong></li>
+      <li>If permission is granted, the GPS coordinates are transmitted to our safety response team via a secure encrypted connection.</li>
+      <li>The coordinates are used solely to dispatch appropriate emergency assistance — including police (119), NCPA (1929), or our field response team.</li>
+      <li><strong>Location data is not stored permanently.</strong> Once the emergency is resolved or contact is established, location data is deleted.</li>
+      <li>Location data is never used for any purpose other than the emergency response for which it was shared.</li>
+      <li>For children (JusticeKids): the SOS system allows a child to call for help without identifying themselves by name or NIC.</li>
+    </ul>
+
+    <div class="notice-box red">
+      <div class="notice-label red">Important — SOS Limitations</div>
+      <div class="notice-text">The SOS system contacts our safety response team who will then contact appropriate authorities. It is <strong>not a substitute</strong> for directly calling Police 119, NCPA 1929 (child protection), or Ambulance 1990 in an immediate life-threatening emergency. Always call emergency services directly if you can do so safely.</div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="pp-section" id="s7">
+    <div class="pp-section-label">Section 7</div>
+    <h2 class="pp-section-title">Cookies & <span>Tracking</span></h2>
+    <p class="pp-body">The Justice LK Ecosystem uses only the following cookies and local storage mechanisms:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Cookie / Storage</th><th>Platform</th><th>Purpose</th><th>Duration</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>googtrans</strong></td>
+          <td>All platforms</td>
+          <td>Stores the user's selected display language for Google Translate. Enables the platform to remember language preference across page loads.</td>
+          <td>Session or until cleared by user</td>
+        </tr>
+        <tr>
+          <td><strong>localStorage (AI key)</strong></td>
+          <td>JusticeLK</td>
+          <td>Stores the Groq AI API key entered by a field officer for AI case summary generation. Stored only in the browser of the device used by the field officer.</td>
+          <td>Until cleared by officer or browser reset</td>
+        </tr>
+        <tr>
+          <td><strong>localStorage (session)</strong></td>
+          <td>LexLK</td>
+          <td>Maintains login session state for authenticated LexLK users. No persistent tracking cookie is used.</td>
+          <td>Session</td>
+        </tr>
+        <tr>
+          <td><strong>Google Fonts</strong></td>
+          <td>All platforms</td>
+          <td>Google Fonts CDN may set cookies as part of font delivery. These are subject to Google's Privacy Policy. No user-identifying data is shared.</td>
+          <td>As per Google's policy</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="pp-body">We do <strong>not</strong> use advertising cookies, cross-site tracking cookies, analytics cookies that identify individuals, or any third-party marketing trackers.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="pp-section" id="s8">
+    <div class="pp-section-label">Section 8</div>
+    <h2 class="pp-section-title">Data Storage <span>& Security</span></h2>
+    <p class="pp-body">Personal data collected through the Justice LK Ecosystem is stored using the following infrastructure:</p>
+    <ul class="pp-list">
+      <li><strong>Cloudflare Workers & KV</strong> — Case data, consultation requests, and document analysis results are processed and stored via Cloudflare's edge computing infrastructure. Cloudflare provides enterprise-grade encryption in transit (TLS 1.3) and at rest.</li>
+      <li><strong>Google Sheets (JusticeLK routing)</strong> — Case summaries routed to the Legal Aid Commission may be transmitted via secure webhook to a Google Sheets instance controlled by the Justice LK team. Access is restricted to authorised field officers and attorneys.</li>
+      <li><strong>GitHub Pages (static hosting)</strong> — Platform code is served via GitHub Pages. No personal data is stored on GitHub Pages infrastructure.</li>
+      <li><strong>Browser-only (JusticeKids, quiz data)</strong> — All JusticeKids quiz data, certificate generation, and session-only chat data is processed entirely in the user's browser and is not transmitted to any server.</li>
+    </ul>
+
+    <p class="pp-body">We implement the following security measures:</p>
+    <ul class="pp-list check">
+      <li>All data transmission uses HTTPS with TLS 1.2 or higher encryption.</li>
+      <li>Case management data (JusticeLK) is accessible only to authenticated field officers using username/password credentials.</li>
+      <li>Document uploads are stored in encrypted format and are accessible only to the assigned attorney or Legal Aid Commission officer.</li>
+      <li>SOS location data is transmitted via encrypted channel and is not logged to permanent storage.</li>
+      <li>Regular security reviews of platform code and infrastructure.</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="pp-section" id="s9">
+    <div class="pp-section-label">Section 9</div>
+    <h2 class="pp-section-title">Third-Party <span>Services</span></h2>
+    <p class="pp-body">The Justice LK Ecosystem uses the following third-party services. Each is subject to their own privacy policy:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Shared</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Translate</strong></td>
+          <td>Google LLC</td>
+          <td>Page translation across 30+ languages</td>
+          <td>Page text content. Subject to <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--teal);">Google Privacy Policy</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>Google Fonts</strong></td>
+          <td>Google LLC</td>
+          <td>Typography (Nunito, Playfair Display)</td>
+          <td>IP address for font delivery. No personal data stored.</td>
+        </tr>
+        <tr>
+          <td><strong>Cloudflare Workers</strong></td>
+          <td>Cloudflare, Inc.</td>
+          <td>AI chatbot backend, SOS system, API processing</td>
+          <td>Query text, session-level data. Subject to <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" style="color:var(--teal);">Cloudflare Privacy Policy</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>Groq API</strong></td>
+          <td>Groq, Inc.</td>
+          <td>AI case summary generation (JusticeLK)</td>
+          <td>Case text submitted for AI summarisation. Subject to <a href="https://groq.com/privacy-policy/" target="_blank" style="color:var(--teal);">Groq Privacy Policy</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>Calendly</strong></td>
+          <td>Calendly LLC</td>
+          <td>Consultation booking (LexLK, JusticeSL)</td>
+          <td>Name, email, selected time slot. Subject to <a href="https://calendly.com/legal/privacy-notice" target="_blank" style="color:var(--teal);">Calendly Privacy Policy</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>GitHub Pages</strong></td>
+          <td>GitHub, Inc. (Microsoft)</td>
+          <td>Platform hosting</td>
+          <td>IP address (standard server logs). No personal data stored.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 10 -->
+  <div class="pp-section" id="s10">
+    <div class="pp-section-label">Section 10</div>
+    <h2 class="pp-section-title">Data Sharing <span>& Disclosure</span></h2>
+    <p class="pp-body">We share personal data only in the following circumstances:</p>
+    <ul class="pp-list">
+      <li><strong>Legal Aid Commission of Sri Lanka</strong> — Case files registered through JusticeLK where the user has been assessed as eligible for government legal aid. Data is shared as part of the core service.</li>
+      <li><strong>Registered Private Attorneys (LexLK network)</strong> — Case files, document analysis results, and consultation request details are shared with the attorney selected by the user, or matched by the platform, with the user's knowledge and consent.</li>
+      <li><strong>Emergency Services</strong> — SOS location data is shared with appropriate emergency services (Police 119, NCPA 1929, Ambulance 1990) when a user activates the SOS button.</li>
+      <li><strong>Legal Obligation</strong> — We will disclose personal data where required by a court order, regulatory authority, or other lawful demand under Sri Lankan law. We will notify the affected user where legally permitted to do so.</li>
+      <li><strong>Institutional Partners (aggregated only)</strong> — Aggregated, non-identifying statistics (total cases registered, districts served, case categories) may be shared with partner organisations (Ministry of Justice, Legal Aid Commission, UNDP, UNICEF) for programme reporting purposes.</li>
+    </ul>
+    <p class="pp-body">We will <strong>never</strong> sell, rent, or trade personal data to any third party for commercial purposes.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="pp-section" id="s11">
+    <div class="pp-section-label">Section 11</div>
+    <h2 class="pp-section-title">Your <span>Rights</span></h2>
+    <p class="pp-body">Under the Personal Data Protection Act No. 9 of 2022 of Sri Lanka and applicable international standards, you have the following rights regarding your personal data:</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="icon">👁️</div>
+        <div class="name">Right of Access</div>
+        <div class="desc">Request a copy of the personal data we hold about you.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">✏️</div>
+        <div class="name">Right of Rectification</div>
+        <div class="desc">Request correction of inaccurate or incomplete personal data.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">🗑️</div>
+        <div class="name">Right of Erasure</div>
+        <div class="desc">Request deletion of your personal data, subject to legal retention obligations.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">⏸️</div>
+        <div class="name">Right to Restrict</div>
+        <div class="desc">Request restriction of processing of your personal data in certain circumstances.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">📦</div>
+        <div class="name">Data Portability</div>
+        <div class="desc">Request your data in a structured, machine-readable format where technically feasible.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">🚫</div>
+        <div class="name">Right to Object</div>
+        <div class="desc">Object to processing based on legitimate interests, including profiling.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">↩️</div>
+        <div class="name">Withdraw Consent</div>
+        <div class="desc">Withdraw consent at any time where processing is based on consent.</div>
+      </div>
+      <div class="right-card">
+        <div class="icon">🏛️</div>
+        <div class="name">Right to Complain</div>
+        <div class="desc">Lodge a complaint with the Data Protection Authority of Sri Lanka.</div>
+      </div>
+    </div>
+
+    <p class="pp-body" style="margin-top:20px;">To exercise any of these rights, contact us using the details in Section 15. We will respond within <strong>30 days</strong>.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="pp-section" id="s12">
+    <div class="pp-section-label">Section 12</div>
+    <h2 class="pp-section-title">Data <span>Retention</span></h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Category</th><th>Retention Period</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>JusticeLK case files</strong></td>
+          <td>7 years from case closure</td>
+          <td>Legal requirement to maintain records supporting legal aid proceedings; limitation period for related civil claims.</td>
+        </tr>
+        <tr>
+          <td><strong>LexLK consultation records</strong></td>
+          <td>5 years from last interaction</td>
+          <td>Attorney-client record keeping obligations; limitation period for professional negligence claims.</td>
+        </tr>
+        <tr>
+          <td><strong>LexLK account data</strong></td>
+          <td>Until account deletion + 1 year</td>
+          <td>Audit trail; fraud prevention.</td>
+        </tr>
+        <tr>
+          <td><strong>JusticeSL enquiry data</strong></td>
+          <td>2 years from enquiry</td>
+          <td>Follow-up capability; programme evaluation.</td>
+        </tr>
+        <tr>
+          <td><strong>SOS location data</strong></td>
+          <td>72 hours maximum</td>
+          <td>Emergency response only. Deleted once contact is made or emergency resolved.</td>
+        </tr>
+        <tr>
+          <td><strong>JusticeKids data</strong></td>
+          <td>Session only (not stored)</td>
+          <td>No personal data is collected from children.</td>
+        </tr>
+        <tr>
+          <td><strong>AI chat sessions</strong></td>
+          <td>Session only (not stored)</td>
+          <td>Privacy by design — no conversation history is retained after the browser session ends.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 13 -->
+  <div class="pp-section" id="s13">
+    <div class="pp-section-label">Section 13</div>
+    <h2 class="pp-section-title">International <span>Users</span></h2>
+    <p class="pp-body">The Justice LK Ecosystem serves users from over 30 countries through JusticeSL and LexLK. For international users, the following applies:</p>
+    <ul class="pp-list">
+      <li>All processing is subject to the laws of Sri Lanka as the primary governing jurisdiction.</li>
+      <li>Data is processed and stored within infrastructure covered by Cloudflare's global network, which maintains data protection standards compliant with GDPR and other international frameworks.</li>
+      <li>EU and UK users are entitled to GDPR rights in addition to those described in Section 11. Our processing of EU/UK user data is based on: consent, contract performance, and legitimate interests as applicable.</li>
+      <li>We do not knowingly transfer personal data to countries without adequate data protection in a manner that is inconsistent with applicable law.</li>
+    </ul>
+  </div>
+
+  <!-- 14 -->
+  <div class="pp-section" id="s14">
+    <div class="pp-section-label">Section 14</div>
+    <h2 class="pp-section-title">Changes to <span>This Policy</span></h2>
+    <p class="pp-body">We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or platform features. When we make material changes, we will update the "Last Updated" date at the top of this page and, where appropriate, notify users through a notice on the relevant platform.</p>
+    <p class="pp-body">Continued use of any platform after an update constitutes acceptance of the revised Privacy Policy. We encourage you to review this page periodically.</p>
+    <p class="pp-body">Previous versions of this Privacy Policy are available on request by contacting us at the details below.</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="pp-section" id="s15">
+    <div class="pp-section-label">Section 15</div>
+    <h2 class="pp-section-title">Contact <span>Us</span></h2>
+    <p class="pp-body">For any privacy-related enquiry, data subject right request, or concern about how your data is handled, contact us:</p>
+    <div class="contact-row">
+      <div class="contact-item">
+        <div class="label">Data Controller</div>
+        <div class="value">Elmo Richard Pereira</div>
+        <div class="sub">Copyright Owner & Data Controller</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Operator</div>
+        <div class="value">Ace Dynamics Trading</div>
+        <div class="sub">Sri Lanka</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Phone / WhatsApp</div>
+        <div class="value"><a href="tel:+94773622211">+94 77 362 2211</a></div>
+        <div class="sub">Elmo Richard Pereira</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:info@acedynamicstrading.com">info@acedynamicstrading.com</a></div>
+        <div class="sub">Privacy enquiries</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Address</div>
+        <div class="value">497 Dalukgala Road</div>
+        <div class="sub">Hiyanthuduwa, Sri Lanka</div>
+      </div>
+    </div>
+    <p class="pp-body" style="margin-top:24px;">We aim to respond to all privacy-related enquiries within <strong>30 calendar days</strong>. For urgent matters involving child safety or emergency response, contact us by phone during business hours or call Police 119 / NCPA 1929 immediately.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://acedynamicstrading.github.io/justicelk/">JusticeLK</a>
+    <a href="https://acedynamicstrading.github.io/justicekids/">JusticeKids</a>
+    <a href="https://acedynamicstrading.github.io/Lexlk/">LexLK</a>
+    <a href="https://acedynamicstrading.github.io/JusticeSL/">JusticeSL</a>
+    <a href="./copyright.html">Copyright & IP</a>
+  </div>
+  <div>© 2024–2026 Elmo Richard Pereira · All Rights Reserved · Justice LK Ecosystem</div>
+  <div style="margin-top:6px;">Operated by Ace Dynamics Trading under licence · Intellectual Property Act No. 36 of 2003 · Sri Lanka</div>
+</footer>
+
+</body>
+</html>
