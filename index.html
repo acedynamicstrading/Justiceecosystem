@@ -24,7 +24,7 @@
 /* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Nunito',sans-serif;background:#0A1628;color:#fff;overflow-x:hidden}
+body{font-family:'Nunito',sans-serif;background:#0A1628;color:#fff;overflow-x:hidden;padding-bottom:48px;}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
@@ -279,6 +279,25 @@ nav{
 .endorsement-item:last-child{border-bottom:none;}
 .endorsement-item::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;}
 
+/* ── SUSTAINABILITY / FUNDING ── */
+#sustainability{
+  padding:100px 24px;
+  background:linear-gradient(135deg,rgba(212,168,67,0.05),transparent 50%),var(--navy);
+}
+.funding-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;margin-top:48px;
+}
+.funding-card{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border);
+  border-radius:16px;padding:28px 24px;transition:all 0.25s;
+}
+.funding-card:hover{background:rgba(255,255,255,0.05);transform:translateY(-4px);}
+.funding-icon{font-size:32px;margin-bottom:14px;}
+.funding-title{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--white);}
+.funding-desc{font-size:13px;color:var(--grey);line-height:1.6;}
+.funding-note{font-size:11px;color:var(--teal);margin-top:8px;font-weight:600;}
+
 /* ── RIGHTS / LEGAL ── */
 #legal{padding:80px 24px;background:var(--navy);}
 .legal-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-top:48px;}
@@ -290,6 +309,33 @@ nav{
 .legal-title{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--white);}
 .legal-text{font-size:13px;color:var(--grey);line-height:1.7;}
 .legal-text a{color:var(--teal);text-decoration:underline;text-underline-offset:3px;}
+
+/* ── COPYRIGHT SECTION ── */
+#copyright{
+  padding:80px 24px;
+  background:linear-gradient(135deg,rgba(212,168,67,0.04),transparent),var(--navy2);
+}
+.copyright-notice-box{
+  background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.25);
+  border-radius:16px;padding:32px 36px;margin-top:40px;
+  max-width:900px;
+}
+.copyright-notice-box .notice-label{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:14px;
+}
+.copyright-notice-box p{
+  font-size:13px;color:var(--grey);line-height:1.8;margin-bottom:12px;
+}
+.copyright-notice-box p:last-child{margin-bottom:0;}
+.copyright-notice-box strong{color:var(--white);}
+.short-notice-box{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border);
+  border-radius:12px;padding:20px 24px;margin-top:20px;
+  font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;
+  max-width:900px;
+}
+.short-notice-box .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px;font-weight:700;}
 
 /* ── CONTACT / CTA ── */
 #contact{
@@ -313,6 +359,23 @@ nav{
 .contact-detail a{color:var(--grey);transition:color 0.2s;}
 .contact-detail a:hover{color:var(--teal);}
 
+/* ── PLATFORM CONTACT CARDS ── */
+.platform-contacts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;margin:40px 0;
+}
+.platform-contact-card{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border);
+  border-radius:12px;padding:18px 20px;text-align:left;
+  transition:border-color 0.2s;
+}
+.platform-contact-card:hover{border-color:rgba(18,168,155,0.25);}
+.platform-contact-icon{font-size:22px;margin-bottom:8px;}
+.platform-contact-name{font-size:13px;font-weight:700;margin-bottom:4px;}
+.platform-contact-email{font-size:12px;}
+.platform-contact-email a{color:var(--teal);}
+.platform-contact-email a:hover{text-decoration:underline;}
+
 /* ── FOOTER ── */
 footer{
   background:rgba(0,0,0,0.4);border-top:1px solid var(--border);
@@ -329,11 +392,12 @@ footer{
 .footer-links{display:flex;gap:24px;flex-wrap:wrap;}
 .footer-links a{font-size:12px;color:var(--grey);transition:color 0.2s;}
 .footer-links a:hover{color:var(--teal);}
-.footer-bottom{
+.footer-copyright{
   border-top:1px solid var(--border);padding-top:20px;
-  font-size:12px;color:rgba(255,255,255,0.25);
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  font-size:11px;color:rgba(255,255,255,0.3);line-height:1.7;
 }
+.footer-copyright p{margin-bottom:6px;}
+.footer-copyright p:last-child{margin-bottom:0;}
 
 /* ── DIVIDERS ── */
 .teal-line{height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);opacity:0.3;margin:0 24px;}
@@ -343,6 +407,58 @@ footer{
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
+/* ── GOOGLE TRANSLATE BAR ── */
+#gt-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:rgba(10,22,40,0.97);backdrop-filter:blur(16px);
+  border-top:1px solid var(--border);
+  padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:12px;
+  font-size:12px;color:var(--grey);
+}
+#gt-bar .gt-label{font-weight:700;color:var(--teal);letter-spacing:1px;text-transform:uppercase;font-size:10px;white-space:nowrap;}
+#google_translate_element select{
+  background:#0D1B2A;color:#fff;border:1px solid rgba(18,168,155,0.35);
+  border-radius:8px;padding:5px 10px;font-size:12px;font-family:'Nunito',sans-serif;
+  outline:none;cursor:pointer;
+}
+#google_translate_element .goog-te-gadget{color:transparent;font-size:0;}
+#google_translate_element .goog-te-gadget span{display:none;}
+.goog-te-banner-frame{display:none!important;}
+body{top:0!important;}
+
+/* ── FLOATING NAV BUTTONS ── */
+#float-nav{
+  position:fixed;right:20px;top:50%;transform:translateY(-50%);
+  z-index:150;display:flex;flex-direction:column;gap:6px;
+  align-items:flex-end;
+}
+.fnav-btn{
+  display:flex;align-items:center;gap:8px;cursor:pointer;
+  background:rgba(10,22,40,0.88);border:1px solid var(--border);
+  border-radius:99px;padding:7px 14px 7px 10px;
+  font-size:11px;font-weight:700;color:var(--grey);
+  transition:all 0.22s;white-space:nowrap;
+  backdrop-filter:blur(12px);
+}
+.fnav-btn:hover{background:rgba(18,168,155,0.15);border-color:var(--teal);color:var(--white);}
+.fnav-btn.active{background:rgba(18,168,155,0.18);border-color:var(--teal);color:var(--teal);}
+.fnav-dot{width:7px;height:7px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background 0.2s;}
+.fnav-btn.active .fnav-dot,.fnav-btn:hover .fnav-dot{background:var(--teal);}
+.fnav-label{overflow:hidden;max-width:0;transition:max-width 0.3s ease,opacity 0.3s;opacity:0;white-space:nowrap;}
+.fnav-btn:hover .fnav-label,.fnav-btn.active .fnav-label{max-width:120px;opacity:1;}
+
+/* scroll-to-top */
+#scroll-top{
+  position:fixed;right:20px;bottom:58px;z-index:150;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(18,168,155,0.15);border:1px solid rgba(18,168,155,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;cursor:pointer;transition:all 0.2s;
+  opacity:0;pointer-events:none;
+}
+#scroll-top.show{opacity:1;pointer-events:auto;}
+#scroll-top:hover{background:rgba(18,168,155,0.35);transform:translateY(-2px);}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   nav{padding:14px 20px;}
@@ -350,6 +466,8 @@ footer{
   .how-grid,.proposal-grid,.legal-grid,.contact-cards{grid-template-columns:1fr;}
   .hero-stats{gap:32px;}
   .expand-grid{grid-template-columns:1fr!important;}
+  #float-nav{display:none;}
+  #scroll-top{right:12px;bottom:58px;}
 }
 </style>
 </head>
@@ -365,6 +483,7 @@ footer{
     <a href="#platforms">Platforms</a>
     <a href="#how">How It Works</a>
     <a href="#proposal">Our Mission</a>
+    <a href="#sustainability">Funding</a>
     <a href="#legal">Legal</a>
     <a href="#contact">Contact</a>
   </div>
@@ -429,7 +548,7 @@ footer{
           <li>Anonymous SOS with live GPS tracking</li>
           <li>Minor Protection Portal</li>
           <li>Interactive rights quiz + certificate</li>
-          <li>AI legal Q&A for children</li>
+          <li>AI legal Q&amp;A for children</li>
           <li>Lesson plans for teachers</li>
         </ul>
         <a href="https://acedynamicstrading.github.io/justicekids/" class="platform-link" target="_blank">Open JusticeKids →</a>
@@ -440,7 +559,7 @@ footer{
         <div class="platform-icon">👨‍⚖️</div>
         <div class="platform-badge badge-purple">Professionals · Public · Foreigners</div>
         <div class="platform-name">LexLK</div>
-        <p class="platform-tagline">Professional legal services platform — complimentary attorney document review, legal Q&A, and lawyer directory for all in Sri Lanka.</p>
+        <p class="platform-tagline">Professional legal services platform — complimentary attorney document review, legal Q&amp;A, and lawyer directory for all in Sri Lanka.</p>
         <ul class="platform-features">
           <li>Free attorney document review (2–4 hrs)</li>
           <li>AI-assisted legal analysis</li>
@@ -448,7 +567,7 @@ footer{
           <li>Find a lawyer by area of law</li>
           <li>Official document retrieval service</li>
           <li>10 languages including Arabic, Chinese</li>
-          <li>Open to foreigners & expatriates</li>
+          <li>Open to foreigners &amp; expatriates</li>
         </ul>
         <a href="https://acedynamicstrading.github.io/Lexlk/" class="platform-link" target="_blank">Open LexLK →</a>
       </div>
@@ -462,10 +581,10 @@ footer{
         <ul class="platform-features">
           <li>8 legal topics: visa, property, business…</li>
           <li>Emergency SOS for foreign nationals</li>
-          <li>AI legal Q&A in 30+ languages</li>
-          <li>Tourist Police & helpline directory</li>
+          <li>AI legal Q&amp;A in 30+ languages</li>
+          <li>Tourist Police &amp; helpline directory</li>
           <li>Free consultation booking</li>
-          <li>Scam & consumer protection guidance</li>
+          <li>Scam &amp; consumer protection guidance</li>
         </ul>
         <a href="https://acedynamicstrading.github.io/JusticeSL/" class="platform-link" target="_blank">Open JusticeSL →</a>
       </div>
@@ -502,7 +621,7 @@ footer{
         <div class="how-step reveal">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">Case Registered & AI-Summarised</div>
+            <div class="step-title">Case Registered &amp; AI-Summarised</div>
             <div class="step-desc">The field officer registers the case through a guided 7-step wizard. AI generates a professional case summary and court petition instantly.</div>
           </div>
         </div>
@@ -537,7 +656,7 @@ footer{
         <div class="flow-arrow">↓</div>
         <div class="flow-item">
           <div class="flow-icon">🤖</div>
-          <div><div class="flow-label">AI Summarises & Routes</div><div class="flow-sub">Case summary + court petition generated</div></div>
+          <div><div class="flow-label">AI Summarises &amp; Routes</div><div class="flow-sub">Case summary + court petition generated</div></div>
         </div>
         <div class="flow-arrow">↓</div>
         <div class="flow-item" style="border-color:rgba(18,168,155,0.3);">
@@ -575,7 +694,7 @@ footer{
       </div>
       <div class="audience-card reveal">
         <div class="audience-emoji">🦁</div>
-        <div class="audience-title">Children & Schools</div>
+        <div class="audience-title">Children &amp; Schools</div>
         <div class="audience-desc">Children aged 10–17 learning their rights, getting help through SOS, and using the Minor Protection Portal anonymously.</div>
       </div>
       <div class="audience-card reveal">
@@ -590,12 +709,12 @@ footer{
       </div>
       <div class="audience-card reveal">
         <div class="audience-emoji">🏫</div>
-        <div class="audience-title">Teachers & Principals</div>
+        <div class="audience-title">Teachers &amp; Principals</div>
         <div class="audience-desc">Educators using JusticeKids lesson plans to teach child rights and legal literacy in national schools across all districts.</div>
       </div>
       <div class="audience-card reveal">
         <div class="audience-emoji">👪</div>
-        <div class="audience-title">Families & Parents</div>
+        <div class="audience-title">Families &amp; Parents</div>
         <div class="audience-desc">Parents understanding how JusticeKids protects their children, and families accessing free legal consultations through LexLK.</div>
       </div>
     </div>
@@ -608,7 +727,7 @@ footer{
 <section id="proposal">
   <div class="section-inner">
     <div class="proposal-inner">
-      <div class="section-label">Our Mission & Proposal</div>
+      <div class="section-label">Our Mission &amp; Proposal</div>
       <h2 class="section-title">Why Sri Lanka<br>Needs This</h2>
       <p class="section-sub">The gap between Sri Lanka's legal system and its citizens — particularly in rural areas — is one of the most persistent challenges to equal justice under the law.</p>
 
@@ -627,8 +746,8 @@ footer{
           <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>All 25 districts</strong> — Field officer case management covers every district in Sri Lanka, including conflict-affected areas.</div></div>
           <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Trilingual</strong> — All platforms operate in Sinhala, Tamil and English. LexLK extends to 10 additional languages.</div></div>
           <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Works offline</strong> — JusticeLK is a Progressive Web App that works fully in remote villages without internet connectivity.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Child-safe design</strong> — JusticeKids is built to international child safety standards with anonymous SOS, no personal data collection, and no advertising.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>30+ languages</strong> — All platforms operate with Google Translate integration covering over 30 languages, with native Sinhala, Tamil and English interfaces, making the ecosystem accessible to every community in Sri Lanka and internationally.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Child-safe design</strong> — JusticeKids is built to international child safety standards with anonymous SOS, no compulsory personal data collection, and designed for all ages.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>30+ languages</strong> — All platforms operate with Google Translate integration covering over 30 languages, with native Sinhala, Tamil and English interfaces.</div></div>
         </div>
       </div>
 
@@ -656,7 +775,7 @@ footer{
           <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.15);border-radius:12px;padding:18px;">
             <div style="font-size:22px;margin-bottom:8px;">🏛️</div>
             <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px;">Official Integration Ready</div>
-            <div style="font-size:12px;color:var(--grey);line-height:1.5;">Designed for direct integration with Police 119, NCPA 1929, Ambulance 1990, and Women & Children's Bureau (1938).</div>
+            <div style="font-size:12px;color:var(--grey);line-height:1.5;">Designed for direct integration with Police 119, NCPA 1929, Ambulance 1990, and Women &amp; Children's Bureau (1938).</div>
           </div>
         </div>
         <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:20px;">All SOS location data is encrypted, used solely for emergency dispatch, and not stored permanently. The system is designed to meet national emergency services integration standards.</p>
@@ -723,7 +842,7 @@ footer{
               → 30+ language support via Google Translate with native interface in key languages<br>
               → PWA offline capability — critical for low-connectivity regions globally<br>
               → Modular architecture — individual platforms or the full ecosystem can be localised<br>
-              → Social enterprise licensing model — sustainable without dependence on advertising<br>
+              → Social enterprise licensing model — sustainable without dependence on single revenue streams<br>
               → Aligns with UNDP SDG 16 (Peace, Justice and Strong Institutions) globally
             </div>
           </div>
@@ -741,9 +860,71 @@ footer{
 
       <div style="margin-top:40px;text-align:center;" class="reveal">
         <p style="font-size:15px;color:var(--grey);margin-bottom:8px;">We invite the Judiciary, Ministry of Justice, Ministry of Education, and institutional partners to engage with us in extending access to justice for every Sri Lankan and beyond.</p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:24px;">All intellectual property rights in the Justice LK Ecosystem remain exclusively with Elmo Richard Pereira. Partnership engagements are operational and programmatic in nature. Sustainable financing models include CSR partnerships (with applicable tax deduction benefits to sponsors), development organisation funding (UNDP, UNICEF, EU, bilateral donors), and impact licensing for international deployment.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:24px;">All intellectual property rights in the Justice LK Ecosystem remain exclusively with Elmo Richard Pereira. Partnership engagements are operational and programmatic in nature. Sustainable financing models include advertising &amp; CSR partnerships, development organisation funding (UNDP, UNICEF, EU, bilateral donors), and impact licensing for international deployment.</p>
         <a href="#contact" class="btn-primary">Get in Touch →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="teal-line"></div>
+
+<!-- SUSTAINABILITY & FUNDING -->
+<section id="sustainability">
+  <div class="section-inner">
+    <div class="section-label">Sustainability &amp; Funding</div>
+    <h2 class="section-title">How We Are Funded</h2>
+    <p class="section-sub">The Justice LK Ecosystem is a self-sustaining social enterprise. Citizen services remain permanently free. Platforms are funded through a diversified revenue model that aligns commercial interests with the public good.</p>
+
+    <div class="funding-grid">
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">📣</div>
+        <div class="funding-title">Advertising</div>
+        <div class="funding-desc">Contextual advertising is served across the Justice LK Ecosystem platforms (excluding restricted content areas within JusticeKids). Advertising revenue supports free citizen services.</div>
+        <div class="funding-note">Revenue supports free access for all users</div>
+      </div>
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">🤝</div>
+        <div class="funding-title">CSR Partnerships</div>
+        <div class="funding-desc">Corporate Social Responsibility partnerships with Sri Lankan and multinational corporations. CSR contributions to the Justice LK Ecosystem may qualify for applicable tax deduction benefits under Sri Lankan law.</div>
+        <div class="funding-note">Tax deduction benefits may apply for sponsors</div>
+      </div>
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">🏛️</div>
+        <div class="funding-title">Development Organisation Funding</div>
+        <div class="funding-desc">Grant funding from UNDP, UNICEF, European Union, World Bank and bilateral development donors. The ecosystem directly supports UNDP SDG 16 (Peace, Justice and Strong Institutions) and SDG 4 (Quality Education).</div>
+        <div class="funding-note">Aligned with UN Sustainable Development Goals</div>
+      </div>
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">🌏</div>
+        <div class="funding-title">International Impact Licensing</div>
+        <div class="funding-desc">The ecosystem architecture is designed for international deployment. Impact licensing to governments and NGOs in other jurisdictions generates revenue while extending the mission globally.</div>
+        <div class="funding-note">Modular — deployable in any country</div>
+      </div>
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">💼</div>
+        <div class="funding-title">Endowments &amp; Sponsorships</div>
+        <div class="funding-desc">Named endowments and platform sponsorships available for institutional partners, foundations, and high-net-worth individuals seeking to make a lasting contribution to access to justice in Sri Lanka.</div>
+        <div class="funding-note">Legacy sponsorship opportunities available</div>
+      </div>
+
+      <div class="funding-card reveal">
+        <div class="funding-icon">⚖️</div>
+        <div class="funding-title">Professional Services (LexLK)</div>
+        <div class="funding-desc">LexLK generates revenue through attorney directory listings, premium consultation bookings, and official document retrieval services for legal professionals — while keeping all citizen-facing services free.</div>
+        <div class="funding-note">Citizens always access services free of charge</div>
+      </div>
+
+    </div>
+
+    <div style="background:rgba(18,168,155,0.06);border:1px solid rgba(18,168,155,0.2);border-radius:16px;padding:28px 32px;margin-top:40px;" class="reveal">
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:12px;">Our Commitment</div>
+      <p style="font-size:15px;color:var(--grey);line-height:1.7;">Regardless of the funding model, <strong style="color:var(--white);">all citizen-facing services on all four platforms will always remain free of charge</strong>. No citizen will ever be required to pay to access legal information, submit a case, use SOS, or consult a field officer. Our commercial activities exist solely to sustain and expand this mission.</p>
     </div>
   </div>
 </section>
@@ -754,19 +935,19 @@ footer{
 <section id="legal">
   <div class="section-inner">
     <div class="section-label">Legal Information</div>
-    <h2 class="section-title">Copyrights, Privacy<br>& Terms of Use</h2>
+    <h2 class="section-title">Copyrights, Privacy<br>&amp; Terms of Use</h2>
 
     <div class="legal-grid">
 
       <div class="legal-card reveal">
         <div class="legal-icon">©️</div>
-        <div class="legal-title">Copyright & Intellectual Property</div>
+        <div class="legal-title">Copyright &amp; Intellectual Property</div>
         <div class="legal-text">
           © 2024–2026 <strong style="color:var(--white);">Elmo Richard Pereira</strong>. All rights reserved.<br><br>
           The Justice LK Ecosystem (JusticeLK · JusticeKids · LexLK · JusticeSL), including all source code, AI systems, original characters (including Leo the Lion Cub), stories, designs, curricula, and content are the exclusive intellectual property of Elmo Richard Pereira. Ace Dynamics Trading operates the platforms under licence from the copyright owner.<br><br>
           Protected under the <strong style="color:var(--white);">Intellectual Property Act No. 36 of 2003</strong> of Sri Lanka and the Berne Convention for the Protection of Literary and Artistic Works.<br><br>
           Unauthorised reproduction, distribution, adaptation, or commercial use is strictly prohibited.<br><br>
-          <a href="./copyright.html">Read full Copyright & IP Notice →</a>
+          <a href="./copyright.html">Read full Copyright &amp; IP Notice →</a>
         </div>
       </div>
 
@@ -775,7 +956,7 @@ footer{
         <div class="legal-title">Privacy Policy</div>
         <div class="legal-text">
           <strong style="color:var(--white)">What we collect:</strong> Case registration details (JusticeLK), consultation requests (LexLK), quiz results anonymously (JusticeKids).<br><br>
-          <strong style="color:var(--white)">What we do not collect:</strong> JusticeKids collects no personal data from children. No names, addresses, NICs or identifying information required.<br><br>
+          <strong style="color:var(--white)">Children's data:</strong> JusticeKids does not require personal data from children. The platform is designed so children can seek help anonymously.<br><br>
           <strong style="color:var(--white)">Data storage:</strong> Case data is held in Cloudflare KV and Google Sheets, protected under attorney-client privilege standards. SOS location data is not stored permanently.<br><br>
           <a href="./privacy-policy.html" target="_blank">Read full Privacy Policy →</a>
         </div>
@@ -803,6 +984,32 @@ footer{
 
 <div class="teal-line"></div>
 
+<!-- COPYRIGHT SECTION 7 -->
+<section id="copyright">
+  <div class="section-inner">
+    <div class="section-label">Section 7 — Copyright</div>
+    <h2 class="section-title">Copyright Notice</h2>
+    <p class="section-sub">Full copyright and intellectual property notice for the Justice LK Ecosystem and all associated platforms.</p>
+
+    <div class="copyright-notice-box reveal">
+      <div class="notice-label">Footer Notice — All Platforms</div>
+      <p>© 2024–2026 <strong>Elmo Richard Pereira</strong>. All rights reserved. The Justice LK Ecosystem (<strong>JusticeLK</strong> · <strong>JusticeKids</strong> · <strong>LexLK</strong> · <strong>JusticeSL</strong>), including all source code, AI systems, original characters (including Leo the Lion Cub), stories, designs, curricula, and content are the exclusive intellectual property of Elmo Richard Pereira.</p>
+      <p>Protected under the <strong>Intellectual Property Act No. 36 of 2003</strong> of Sri Lanka and the Berne Convention for the Protection of Literary and Artistic Works. Ace Dynamics Trading operates the platforms under licence from the copyright owner. Unauthorised reproduction, distribution, adaptation, or commercial use is strictly prohibited.</p>
+    </div>
+
+    <div class="short-notice-box reveal">
+      <div class="label">Short Notice — Proposals, Reports &amp; Presentations</div>
+      © 2024–2026 Elmo Richard Pereira · All Rights Reserved · Justice LK Ecosystem (JusticeLK · JusticeKids · LexLK · JusticeSL) · Intellectual Property Act No. 36 of 2003 · Sri Lanka · Operated by Ace Dynamics Trading under licence.
+    </div>
+
+    <div style="margin-top:24px;" class="reveal">
+      <a href="./copyright.html" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">Read Full Copyright &amp; IP Notice →</a>
+    </div>
+  </div>
+</section>
+
+<div class="teal-line"></div>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
@@ -813,17 +1020,44 @@ footer{
     <div class="contact-cards">
       <div class="contact-card reveal">
         <div class="contact-name">Elmo Richard Pereira</div>
-        <div class="contact-role">Co-Founder · Platform Developer</div>
+        <div class="contact-role">Co-Founder · Platform Developer · IP Owner</div>
         <div class="contact-detail">📞 <a href="tel:+94773622211">+94 77 362 2211</a></div>
-        <div class="contact-detail">✉️ <a href="mailto:info@acedynamicstrading.com">info@acedynamicstrading.com</a></div>
+        <div class="contact-detail">✉️ <a href="mailto:acedynamicstrading@gmail.com">acedynamicstrading@gmail.com</a></div>
         <div class="contact-detail">📍 497 Dalukgala Road, Hiyanthuduwa, Sri Lanka</div>
       </div>
       <div class="contact-card reveal">
-        <div class="contact-name">Rukshan</div>
-        <div class="contact-role">Co-Founder · Attorney at Law</div>
+        <div class="contact-name">Rukshan Mendis</div>
+        <div class="contact-role">Co-Founder · Attorney at Law · Human Rights</div>
         <div class="contact-detail">📞 <a href="tel:+94717698609">+94 71 769 8609</a></div>
-        <div class="contact-detail">⚖️ Legal &amp; Institutional Affairs</div>
+        <div class="contact-detail">⚖️ Legal &amp; Institutional Affairs · Human Rights Law</div>
         <div class="contact-detail">🏛️ Available for court &amp; ministry meetings</div>
+      </div>
+    </div>
+
+    <!-- PLATFORM CONTACTS -->
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:16px;text-align:center;">Platform-Specific Enquiries</div>
+      <div class="platform-contacts reveal">
+        <div class="platform-contact-card">
+          <div class="platform-contact-icon">⚖️</div>
+          <div class="platform-contact-name">JusticeLK</div>
+          <div class="platform-contact-email"><a href="mailto:justicelkcontact@gmail.com">justicelkcontact@gmail.com</a></div>
+        </div>
+        <div class="platform-contact-card">
+          <div class="platform-contact-icon">🦁</div>
+          <div class="platform-contact-name">JusticeKids</div>
+          <div class="platform-contact-email"><a href="mailto:justicekidslk@gmail.com">justicekidslk@gmail.com</a></div>
+        </div>
+        <div class="platform-contact-card">
+          <div class="platform-contact-icon">👨‍⚖️</div>
+          <div class="platform-contact-name">LexLK</div>
+          <div class="platform-contact-email"><a href="mailto:servicelexlk@gmail.com">servicelexlk@gmail.com</a></div>
+        </div>
+        <div class="platform-contact-card">
+          <div class="platform-contact-icon">🌐</div>
+          <div class="platform-contact-name">JusticeSL</div>
+          <div class="platform-contact-email"><a href="mailto:acedynamicstrading@gmail.com">acedynamicstrading@gmail.com</a></div>
+        </div>
       </div>
     </div>
 
@@ -851,33 +1085,113 @@ footer{
         <a href="https://acedynamicstrading.github.io/justicekids/">JusticeKids</a>
         <a href="https://acedynamicstrading.github.io/Lexlk/">LexLK</a>
         <a href="https://acedynamicstrading.github.io/JusticeSL/">JusticeSL</a>
-        <a href="./copyright.html">Copyright & IP</a>
+        <a href="./copyright.html">Copyright &amp; IP</a>
         <a href="./privacy-policy.html">Privacy Policy</a>
         <a href="#legal">Terms of Use</a>
+        <a href="mailto:acedynamicstrading@gmail.com">Contact</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>© 2024–2026 Elmo Richard Pereira · All Rights Reserved · Operated by Ace Dynamics Trading under licence · Sri Lanka</div>
-      <div>JusticeLK · JusticeKids · LexLK · JusticeSL · Intellectual Property Act No. 36 of 2003</div>
+    <div class="footer-copyright">
+      <p>© 2024–2026 <strong style="color:rgba(255,255,255,0.5);">Elmo Richard Pereira</strong>. All rights reserved. The Justice LK Ecosystem (JusticeLK · JusticeKids · LexLK · JusticeSL), including all source code, AI systems, original characters (including Leo the Lion Cub), stories, designs, curricula, and content are the exclusive intellectual property of Elmo Richard Pereira. Protected under the Intellectual Property Act No. 36 of 2003 of Sri Lanka and the Berne Convention for the Protection of Literary and Artistic Works. Ace Dynamics Trading operates the platforms under licence from the copyright owner. Unauthorised reproduction, distribution, adaptation, or commercial use is strictly prohibited.</p>
+      <p style="margin-top:10px;color:rgba(255,255,255,0.2);">© 2024–2026 Elmo Richard Pereira · All Rights Reserved · Justice LK Ecosystem (JusticeLK · JusticeKids · LexLK · JusticeSL) · Intellectual Property Act No. 36 of 2003 · Sri Lanka · Operated by Ace Dynamics Trading under licence.</p>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
+<!-- GOOGLE TRANSLATE BAR -->
+<div id="gt-bar">
+  <span class="gt-label">🌐 Translate</span>
+  <div id="google_translate_element"></div>
+</div>
+
+<!-- FLOATING SECTION NAV -->
+<div id="float-nav">
+  <div class="fnav-btn" onclick="scrollTo('#hero')">
+    <span class="fnav-dot"></span><span class="fnav-label">Home</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#platforms')">
+    <span class="fnav-dot"></span><span class="fnav-label">Platforms</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#how')">
+    <span class="fnav-dot"></span><span class="fnav-label">How It Works</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#audience')">
+    <span class="fnav-dot"></span><span class="fnav-label">Who It Serves</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#proposal')">
+    <span class="fnav-dot"></span><span class="fnav-label">Our Mission</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#sustainability')">
+    <span class="fnav-dot"></span><span class="fnav-label">Funding</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#legal')">
+    <span class="fnav-dot"></span><span class="fnav-label">Legal</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#copyright')">
+    <span class="fnav-dot"></span><span class="fnav-label">Copyright</span>
+  </div>
+  <div class="fnav-btn" onclick="scrollTo('#contact')">
+    <span class="fnav-dot"></span><span class="fnav-label">Contact</span>
+  </div>
+</div>
+
+<!-- SCROLL TO TOP -->
+<div id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</div>
+
+<!-- GOOGLE TRANSLATE SCRIPT -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'si,ta,fr,de,es,it,pt,ar,zh-CN,zh-TW,ja,ko,hi,ru,pl,nl,tr,ms,id,vi,th,my,km,lo,fil,ur,fa,he,sw,af',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+// ── Scroll reveal
+const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
-      // Stagger children if multiple
-      const children = e.target.querySelectorAll('.reveal');
-      children.forEach((child, i) => {
-        setTimeout(() => child.classList.add('visible'), i * 80);
-      });
+      revealObs.unobserve(e.target);
     }
   });
 }, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// ── Floating nav: scroll to section
+function scrollTo(id) {
+  const el = document.querySelector(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
 
-// Also trigger hero a
+// ── Floating nav: active state on scroll
+const sections = ['#hero','#platforms','#how','#audience','#proposal','#sustainability','#legal','#copyright','#contact'];
+const navBtns = document.querySelectorAll('.fnav-btn');
+
+function updateActiveNav() {
+  let current = 0;
+  sections.forEach((id, i) => {
+    const el = document.querySelector(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = i;
+  });
+  navBtns.forEach((btn, i) => {
+    btn.classList.toggle('active', i === current);
+  });
+}
+
+// ── Scroll-to-top visibility
+const scrollTopBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  updateActiveNav();
+  scrollTopBtn.classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+
+updateActiveNav();
+</script>
+</body>
+</html>
