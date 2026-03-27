@@ -51,17 +51,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 
 /* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(18,168,155,0.12) 0%,transparent 70%),radial-gradient(ellipse 60% 40% at 80% 60%,rgba(212,168,67,0.06) 0%,transparent 60%),var(--navy);}
-.hero-tag{display:inline-block;font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--teal);border:1px solid rgba(18,168,155,0.3);border-radius:99px;padding:6px 18px;margin-bottom:28px;animation:fadeUp 0.8s ease forwards;opacity:0;}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,88px);font-weight:900;line-height:1.05;margin-bottom:24px;animation:fadeUp 0.8s 0.1s ease forwards;opacity:0;}
+.hero-tag{display:inline-block;font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase;color:var(--teal);border:1px solid rgba(18,168,155,0.3);border-radius:99px;padding:6px 18px;margin-bottom:28px;animation:fadeUp 0.8s ease forwards;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,88px);font-weight:900;line-height:1.05;margin-bottom:24px;animation:fadeUp 0.8s 0.1s ease forwards;}
 .hero-title em{font-style:normal;color:var(--teal);}
 .hero-title .gold{color:var(--gold);}
-.hero-sub{max-width:620px;font-size:clamp(15px,2vw,19px);color:var(--grey);line-height:1.7;margin-bottom:40px;animation:fadeUp 0.8s 0.2s ease forwards;opacity:0;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fadeUp 0.8s 0.3s ease forwards;opacity:0;margin-bottom:80px;}
+.hero-sub{max-width:620px;font-size:clamp(15px,2vw,19px);color:var(--grey);line-height:1.7;margin-bottom:40px;animation:fadeUp 0.8s 0.2s ease forwards;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fadeUp 0.8s 0.3s ease forwards;margin-bottom:80px;}
 .btn-primary{background:var(--teal);color:var(--white);font-size:15px;font-weight:700;padding:14px 32px;border-radius:99px;box-shadow:0 4px 24px rgba(18,168,155,0.35);transition:all 0.2s;}
 .btn-primary:hover{background:#0d8a7e;transform:translateY(-2px);box-shadow:0 8px 32px rgba(18,168,155,0.4);}
 .btn-outline{background:transparent;color:var(--white);font-size:15px;font-weight:700;padding:14px 32px;border-radius:99px;border:1.5px solid rgba(255,255,255,0.25);transition:all 0.2s;}
 .btn-outline:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.5);}
-.hero-stats{display:flex;gap:60px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s 0.4s ease forwards;opacity:0;}
+.hero-stats{display:flex;gap:60px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s 0.4s ease forwards;}
 .stat{text-align:center;}
 .stat-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--gold);line-height:1;}
 .stat-label{font-size:12px;color:var(--grey);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
@@ -73,8 +73,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .section-sub{font-size:16px;color:var(--grey);line-height:1.7;max-width:600px;margin-bottom:60px;}
 .teal-line{height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);opacity:0.3;margin:0 24px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.animate{opacity:0;transform:translateY(30px);}
+.reveal.animate.visible{opacity:1;transform:translateY(0);}
 
 /* PLATFORMS */
 #platforms{padding:100px 24px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);}
@@ -281,16 +282,18 @@ body{top:0!important;}
 
       <div class="platform-card p-justice reveal">
         <div class="platform-icon">⚖️</div>
-        <div class="platform-badge badge-teal">Field Officers · Legal Aid</div>
+        <div class="platform-badge badge-teal">Citizens · Facilitators · District Courts</div>
         <div class="platform-name">JusticeLK</div>
-        <p class="platform-tagline">National case management system for field officers to register, track and route legal cases in all 25 districts.</p>
+        <p class="platform-tagline">A grassroots digital front-end that helps people digitise their initial complaints through a simple guided process — online or fully offline — then routes them to free legal aid or a private attorney based on their choice.</p>
         <ul class="platform-features">
-          <li>7-step case registration wizard</li>
-          <li>AI-generated case summaries</li>
-          <li>Automatic Legal Aid Commission routing</li>
-          <li>Court petition generation</li>
-          <li>Client case tracking via token</li>
-          <li>Works offline in remote villages</li>
+          <li>Simple guided complaint digitisation</li>
+          <li>Field facilitator early mediation step</li>
+          <li>User chooses free or paid legal help</li>
+          <li>Routes to Legal Aid Commission or private attorney</li>
+          <li>Structured digital ticket for District Court</li>
+          <li>AI-assisted document preparation</li>
+          <li>Client tracking via token number</li>
+          <li>Fully offline PWA for remote areas</li>
           <li>Sinhala · Tamil · English</li>
         </ul>
         <a href="https://acedynamicstrading.github.io/justicelk/" class="platform-link" target="_blank">Open JusticeLK →</a>
@@ -356,76 +359,100 @@ body{top:0!important;}
 <section id="how">
   <div class="section-inner">
     <div class="section-label">How It Works</div>
-    <h2 class="section-title">From Problem to Resolution</h2>
-    <p class="section-sub">The JusticeLK ecosystem guides anyone from their first moment of need to a qualified legal professional — in minutes, not months.</p>
+    <h2 class="section-title">From Community<br>to Court</h2>
+    <p class="section-sub">JusticeLK acts as a grassroots digital front-end — helping rural communities submit clean, structured complaints, choose free or paid legal help, and connect to the right party or the nearest District Court.</p>
     <div class="how-grid">
       <div class="how-steps">
         <div class="how-step reveal">
           <div class="step-num">1</div>
           <div class="step-content">
             <div class="step-title">Person Identifies Their Problem</div>
-            <div class="step-desc">A villager, child, tourist, foreigner or professional faces a legal issue — land dispute, abuse, wage theft, visa problem, or any legal matter.</div>
+            <div class="step-desc">A villager, family or individual — particularly in rural or remote areas — has a complaint or dispute they need to bring forward through official channels.</div>
           </div>
         </div>
         <div class="how-step reveal">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">Access the Right Platform</div>
-            <div class="step-desc">They access JusticeLK (with a field officer), JusticeKids (children), LexLK (professional help), or JusticeSL (everyone in Sri Lanka) — all free, in their language.</div>
+            <div class="step-title">Complaint Digitised via Guided Process</div>
+            <div class="step-desc">A field-level facilitator helps the person complete a simple guided form — available online or fully offline as a PWA. The complaint is digitised in a clean, standardised format in Sinhala, Tamil or English.</div>
           </div>
         </div>
         <div class="how-step reveal">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">Case Registered &amp; AI-Summarised</div>
-            <div class="step-desc">The field officer registers the case through a guided 7-step wizard. AI generates a professional case summary and court petition instantly.</div>
+            <div class="step-title">Early Mediation Attempted</div>
+            <div class="step-desc">The facilitator first reviews the complaint and attempts early resolution or mediation where possible — reducing unnecessary escalation to formal proceedings.</div>
           </div>
         </div>
         <div class="how-step reveal">
           <div class="step-num">4</div>
           <div class="step-content">
-            <div class="step-title">Automatically Routed to Legal Aid</div>
-            <div class="step-desc">The case file is automatically sent to the Legal Aid Commission or a registered private attorney based on the person's needs and means.</div>
+            <div class="step-title">Free or Paid Legal Help — User's Choice</div>
+            <div class="step-desc">The system asks the user how they wish to proceed. They are free to choose any path that suits them:<br><br>
+            <strong>Free legal help</strong> — guided to the Legal Aid Commission.<br>
+            <strong>Paid — JusticeLK attorney</strong> — connected to a JusticeLK-registered private attorney via LexLK, with case documents ready.<br>
+            <strong>Own attorney</strong> — the user may proceed with any attorney of their own choosing. JusticeLK-registered attorneys are not mandatory. The user has full rights to continue whichever way they prefer.</div>
           </div>
         </div>
         <div class="how-step reveal">
           <div class="step-num">5</div>
           <div class="step-content">
-            <div class="step-title">Client Tracks Progress by Token</div>
-            <div class="step-desc">The person receives a unique token number. They can track their case status at any time — no login required.</div>
+            <div class="step-title">Structured Ticket Forwarded to District Court</div>
+            <div class="step-desc">The system simultaneously generates a structured digital ticket with relevant documents in a suitable format and forwards it to the nearest District Court for official processing.</div>
+          </div>
+        </div>
+        <div class="how-step reveal">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <div class="step-title">Complainant Continues via Official Channels</div>
+            <div class="step-desc">The complainant proceeds through standard court procedures, supported by their chosen legal representative. JusticeLK tracks their submission by token — it does not perform any court functions.</div>
           </div>
         </div>
       </div>
       <div class="how-visual reveal">
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:20px;font-weight:700;">Case Flow</div>
+        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:20px;font-weight:700;">JusticeLK Flow</div>
         <div class="flow-item">
           <div class="flow-icon">👤</div>
-          <div><div class="flow-label">Anyone in Need</div><div class="flow-sub">Citizen · Tourist · Child · Expat · Any District</div></div>
+          <div><div class="flow-label">Person in Need</div><div class="flow-sub">Rural · Remote · Any District · Any Community</div></div>
         </div>
         <div class="flow-arrow">↓</div>
         <div class="flow-item">
-          <div class="flow-icon">⚖️</div>
-          <div><div class="flow-label">Field Officer Registers Case</div><div class="flow-sub">JusticeLK CMS — 7-step wizard</div></div>
+          <div class="flow-icon">📝</div>
+          <div><div class="flow-label">Complaint Digitised</div><div class="flow-sub">Guided form — online or fully offline PWA</div></div>
         </div>
         <div class="flow-arrow">↓</div>
         <div class="flow-item">
-          <div class="flow-icon">🤖</div>
-          <div><div class="flow-label">AI Summarises &amp; Routes</div><div class="flow-sub">Case summary + court petition generated</div></div>
+          <div class="flow-icon">🤝</div>
+          <div><div class="flow-label">Facilitator Reviews &amp; Mediates</div><div class="flow-sub">Early resolution attempted first</div></div>
+        </div>
+        <div class="flow-arrow" style="opacity:0.35;font-size:11px;letter-spacing:1px;">IF UNRESOLVED</div>
+        <div class="flow-item" style="border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.05);">
+          <div class="flow-icon">❓</div>
+          <div><div class="flow-label" style="color:var(--gold);">Free or Paid Legal Help?</div><div class="flow-sub">User's choice — all three paths are valid</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;">
+          <div class="flow-item" style="border-color:rgba(18,168,155,0.3);margin-bottom:0;">
+            <div class="flow-icon" style="font-size:18px;">🏛️</div>
+            <div><div class="flow-label" style="font-size:12px;">Legal Aid Commission</div><div class="flow-sub">Free assistance</div></div>
+          </div>
+          <div class="flow-item" style="border-color:rgba(139,92,246,0.3);margin-bottom:0;">
+            <div class="flow-icon" style="font-size:18px;">👨‍⚖️</div>
+            <div><div class="flow-label" style="font-size:12px;">JusticeLK Attorney</div><div class="flow-sub">via LexLK</div></div>
+          </div>
+          <div class="flow-item" style="border-color:rgba(255,255,255,0.12);margin-bottom:0;">
+            <div class="flow-icon" style="font-size:18px;">🔍</div>
+            <div><div class="flow-label" style="font-size:12px;">Own Attorney</div><div class="flow-sub">User's preference</div></div>
+          </div>
         </div>
         <div class="flow-arrow">↓</div>
-        <div class="flow-item" style="border-color:rgba(18,168,155,0.3);">
-          <div class="flow-icon">🏛️</div>
-          <div><div class="flow-label">Legal Aid Commission</div><div class="flow-sub">Free government legal representation</div></div>
-        </div>
-        <div class="flow-arrow" style="opacity:0.3;">OR</div>
-        <div class="flow-item" style="border-color:rgba(139,92,246,0.3);">
-          <div class="flow-icon">👨‍⚖️</div>
-          <div><div class="flow-label">Registered Private Attorney</div><div class="flow-sub">via LexLK professional network</div></div>
+        <div class="flow-item">
+          <div class="flow-icon">📋</div>
+          <div><div class="flow-label">Structured Ticket to District Court</div><div class="flow-sub">AI-assisted · Clean standardised format</div></div>
         </div>
         <div class="flow-arrow">↓</div>
         <div class="flow-item" style="background:rgba(18,168,155,0.08);border-color:rgba(18,168,155,0.3);">
           <div class="flow-icon">✅</div>
-          <div><div class="flow-label">Resolution</div><div class="flow-sub">Client tracks via token · Updates by WhatsApp/SMS</div></div>
+          <div><div class="flow-label">Official Court Process Begins</div><div class="flow-sub">Complainant tracks submission via token number</div></div>
         </div>
       </div>
     </div>
@@ -496,13 +523,48 @@ body{top:0!important;}
         </div>
         <div class="proposal-block reveal">
           <div class="proposal-block-title">What JusticeLK Delivers</div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Fully operational today</strong> — All four platforms are live, tested and accessible at no cost to any user.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>All 25 districts</strong> — Field officer case management covers every district in Sri Lanka, including conflict-affected areas.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Trilingual</strong> — All platforms operate in Sinhala, Tamil and English. LexLK extends to 10 additional languages.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Works offline</strong> — JusticeLK is a Progressive Web App that works fully in remote villages without internet connectivity.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Child-safe design</strong> — JusticeKids is built to international child safety standards with anonymous SOS and no compulsory personal data collection.</div></div>
-          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>30+ languages</strong> — Google Translate integration covers 30+ languages with native Sinhala, Tamil and English interfaces.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Grassroots digital front-end</strong> — Helps rural communities digitise complaints through a simple guided process, supplying clean standardised data directly to the nearest District Court.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Facilitator-led mediation first</strong> — A field-level facilitator attempts early resolution before any formal escalation, reducing unnecessary court burden.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Complementary, not competing</strong> — JusticeLK does not replace or duplicate the Judiciary's e-Court / e-CMS project or any official digital initiative. It feeds better-organised inputs into those systems.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Fully offline PWA</strong> — Works without internet connectivity in the most remote areas, ensuring no community is left behind.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>Trilingual</strong> — Sinhala, Tamil and English with Google Translate integration covering 30+ languages.</div></div>
+          <div class="proposal-item"><div class="proposal-dot"></div><div class="proposal-text"><strong>JURE &amp; Legal Aid Dialogue 2026 aligned</strong> — This model directly supports the goals of improving access to justice outside Colombo and rural digitalization of justice inputs.</div></div>
         </div>
+      </div>
+
+      <!-- COMPLEMENTARY POSITIONING -->
+      <div style="background:linear-gradient(135deg,rgba(18,168,155,0.07),rgba(18,168,155,0.02));border:1px solid rgba(18,168,155,0.25);border-radius:20px;padding:36px;margin:48px 0;" class="reveal">
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:14px;">📌 Our Position</div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:16px;">A Complementary Grassroots Front-End — Not a Replacement</div>
+        <p style="font-size:15px;color:var(--grey);line-height:1.7;margin-bottom:28px;">JusticeLK does not replace, duplicate, or interfere with any official digital court systems. It exists to improve the quality and organisation of inputs <em style="color:var(--white);font-style:normal;">entering</em> those systems — particularly from rural and remote communities.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="expand-grid">
+          <div>
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:14px;">✓ What JusticeLK Is</div>
+            <div style="font-size:13px;color:var(--grey);line-height:1.9;">
+              → A citizen-friendly digital complaint entry point<br>
+              → A grassroots PWA accessible offline in remote areas<br>
+              → A facilitator-assisted early mediation tool<br>
+              → A routing system — user chooses free (Legal Aid Commission), a JusticeLK-registered attorney (via LexLK), or their own attorney of choice — all options are valid, JusticeLK attorneys are not mandatory<br>
+              → A structured data supplier to District Courts<br>
+              → A front-end that generates well-organised, standardised documents<br>
+              → Complementary to the Judiciary's e-Court / e-CMS project<br>
+              → Aligned with JURE project goals and Legal Aid Dialogue 2026
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,100,100,0.8);font-weight:700;margin-bottom:14px;">✕ What JusticeLK Is Not</div>
+            <div style="font-size:13px;color:var(--grey);line-height:1.9;">
+              → Not a court system or court function<br>
+              → Does not issue certified copies or court documents<br>
+              → Does not duplicate or compete with e-Court / e-CMS<br>
+              → Does not perform functions of the Judicial Service Commission<br>
+              → Does not perform functions of the Legal Aid Commission<br>
+              → Does not replace standard court procedures<br>
+              → Does not constitute legal advice
+            </div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:24px;line-height:1.7;">This complementary approach helps accelerate the reach of all official digitalization efforts by enabling better-organised inputs from rural communities right from the start. We believe this model aligns well with the goals of the <strong style="color:rgba(255,255,255,0.55);">JURE project</strong> and the <strong style="color:rgba(255,255,255,0.55);">Legal Aid Dialogue 2026</strong>, particularly in improving access to justice outside Colombo.</p>
       </div>
 
       <!-- SOS -->
@@ -706,7 +768,7 @@ body{top:0!important;}
         <div class="contact-name">Elmo Richard Pereira</div>
         <div class="contact-role">Co-Founder · Platform Developer · IP Owner</div>
         <div class="contact-detail">📞 <a href="tel:+94773622211">+94 77 362 2211</a></div>
-        <div class="contact-detail">✉️ <a href="mailto:acedynamicstrading@gmail.com">acedynamicstrading@gmail.com</a></div>
+        <div class="contact-detail">✉️ <a href="/cdn-cgi/l/email-protection#6e0f0d0b0a17000f03070d1d1a1c0f0a0700092e09030f0702400d0103"><span class="__cf_email__" data-cfemail="7c1d1f191805121d11151f0f080e1d1815121b3c1b111d1510521f1311">[email&#160;protected]</span></a></div>
         <div class="contact-detail">📍 497 Dalukgala Road, Hiyanthuduwa, Sri Lanka</div>
       </div>
       <div class="contact-card reveal">
@@ -724,22 +786,22 @@ body{top:0!important;}
         <div class="platform-contact-card">
           <div class="platform-contact-icon">⚖️</div>
           <div class="platform-contact-name">JusticeLK</div>
-          <div class="platform-contact-email"><a href="mailto:justicelkcontact@gmail.com">justicelkcontact@gmail.com</a></div>
+          <div class="platform-contact-email"><a href="/cdn-cgi/l/email-protection#29435c5a5d404a4c45424a46475d484a5d694e44484045074a4644"><span class="__cf_email__" data-cfemail="553f2026213c3630393e363a3b21343621153238343c397b363a38">[email&#160;protected]</span></a></div>
         </div>
         <div class="platform-contact-card">
           <div class="platform-contact-icon">🦁</div>
           <div class="platform-contact-name">JusticeKids</div>
-          <div class="platform-contact-email"><a href="mailto:justicekidslk@gmail.com">justicekidslk@gmail.com</a></div>
+          <div class="platform-contact-email"><a href="/cdn-cgi/l/email-protection#2d47585e59444e484644495e41466d4a404c4441034e4240"><span class="__cf_email__" data-cfemail="6c06191f18050f090705081f00072c0b010d0500420f0301">[email&#160;protected]</span></a></div>
         </div>
         <div class="platform-contact-card">
           <div class="platform-contact-icon">👨‍⚖️</div>
           <div class="platform-contact-name">LexLK</div>
-          <div class="platform-contact-email"><a href="mailto:servicelexlk@gmail.com">servicelexlk@gmail.com</a></div>
+          <div class="platform-contact-email"><a href="/cdn-cgi/l/email-protection#295a4c5b5f404a4c454c514542694e44484045074a4644"><span class="__cf_email__" data-cfemail="93e0f6e1e5faf0f6fff6ebfff8d3f4fef2faffbdf0fcfe">[email&#160;protected]</span></a></div>
         </div>
         <div class="platform-contact-card">
           <div class="platform-contact-icon">🌐</div>
           <div class="platform-contact-name">JusticeSL</div>
-          <div class="platform-contact-email"><a href="mailto:acedynamicstrading@gmail.com">acedynamicstrading@gmail.com</a></div>
+          <div class="platform-contact-email"><a href="/cdn-cgi/l/email-protection#91f0f2f4f5e8fff0fcf8f2e2e5e3f0f5f8fff6d1f6fcf0f8fdbff2fefc"><span class="__cf_email__" data-cfemail="83e2e0e6e7faede2eeeae0f0f7f1e2e7eaede4c3e4eee2eaefade0ecee">[email&#160;protected]</span></a></div>
         </div>
       </div>
     </div>
@@ -769,7 +831,7 @@ body{top:0!important;}
         <a href="./copyright.html">Copyright &amp; IP</a>
         <a href="./privacy-policy.html">Privacy Policy</a>
         <a href="#legal">Terms of Use</a>
-        <a href="mailto:acedynamicstrading@gmail.com">Contact</a>
+        <a href="/cdn-cgi/l/email-protection#7d1c1e181904131c10141e0e090f1c1914131a3d1a101c1411531e1210">Contact</a>
       </div>
     </div>
     <div class="footer-copyright">
@@ -802,7 +864,7 @@ body{top:0!important;}
 <div id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</div>
 
 <!-- GOOGLE TRANSLATE INIT -->
-<script type="text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
@@ -815,12 +877,12 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-// Scroll reveal
+// Scroll reveal — visible by default, animate on scroll for real browsers
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 // Floating nav
